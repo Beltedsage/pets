@@ -1,0 +1,14 @@
+<?php
+    include "../../library/db.php";
+    $conn = connect();
+    echo "Connected successfully<br>";
+    $query = "UPDATE pets SET name=?, age=?, type=? WHERE id=?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("siss", $_POST['name'], $_POST['age'], $_POST['type'], $_POST['id'],);
+    $stmt->execute();
+    // echo "<br>You have successfully added <strong>" . $_POST['name'] . "</strong> to the database."
+
+    //echo $_POST["id"];
+
+    header("Location: http://localhost/Github/College-DSD/John-work/pets-database/pets/display/display-all-pets.php?id={$_POST["id"]}&msg=success");
+?>
