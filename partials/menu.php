@@ -14,19 +14,19 @@
  ?>
 
 <div class="navigation-bar">
-    <a href="/Github/College-DSD/John-work/pets-database/pets"
+    <a href="/GitHub/pets"
        class="<?= $current == 'index.php' ? 'active' : '' ?>">Home</a>
 
-    <a href="/Github/College-DSD/John-work/pets-database/pets/add/add-a-pet.php"
+    <a href="/GitHub/pets/add/add-a-pet.php"
        class="<?= $current == 'add-a-pet.php' ? 'active' : '' ?>">Add a pet</a>
 
-    <a href="/Github/College-DSD/John-work/pets-database/pets/display/display-all-pets.php"
+    <a href="/Github/pets/display/display-all-pets.php"
        class="<?= in_array($current, ['display-all-pets.php', 'edit.php', 'delete-action.php']) ? 'active' : '' ?>">Show all</a>
 
-    <a href="/Github/College-DSD/John-work/pets-database/pets/search.php"
+    <a href="/Github/pets/search.php"
        class="<?= $current == 'search.php' ? 'active' : '' ?>">Search</a>
 
-    <form action="/Github/College-DSD/John-work/pets-database/pets/search.php" method="POST">
+    <form action="/Github/pets/search.php" method="POST">
             <!-- <label for="search">Enter part of a pet's name:</label> -->
             <input type="text" name="search" placeholder="Enter a pet's name" value="<?= $user_search_string ?>">
             <input type="submit" value="Search">
